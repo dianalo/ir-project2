@@ -38,7 +38,7 @@
     	<artifactId>tinyir</artifactId>
     	<version>1.0</version>
     	<scope>system</scope>
-    	<systemPath>${project.basedir}/lib/tinyir-1.0.jar</systemPath>
+    	<systemPath>${project.basedir}/lib/tinyir-1.1.jar</systemPath>
 	</dependency>
 	<dependency>
   		<groupId>org.scalanlp</groupId>
