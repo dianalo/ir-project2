@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-87-0426 </DOCNO><TEXT>A modulus designed for selection and storage of analog information enteredfrom diagnostic apparatus arranged in a plasma installation is described.The number of modulus input channels is 24 and output ones - 6. The principleof internal parallel channel communication is used. Sampling time offour input channels is 25 {mu}s. Selection time of the channel is 3 {mu}s.The maximum input channel is +-2 V. The modulus size is 1 M. 2 refs.;2 figs.</TEXT></DOC>

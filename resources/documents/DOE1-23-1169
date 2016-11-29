@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-23-1169 </DOCNO><TEXT>Solving the problem of optimal switching means trying to optimize concurrentlynetwork switching and generation schedule. In this document, it is explainedhow the problem can be approached using a new formulation and a non-linearoptimization problem, solved by sequential quadratic programming.</TEXT></DOC>

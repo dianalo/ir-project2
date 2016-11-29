@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE2-39-1215 </DOCNO><TEXT>An important aspect of detection of anomalies in signals is the identificationof changes in signal behavior caused by noise, jumps, changes in band-width,sudden pulses and signal bias. A methodology is developed to identify,isolate and characterize these anomalies using a modification of thecumulative sum (CUSUM) approach. The new algorithm performs anomaly detectionat three levels and is implemented on a general purpose computer. 7 refs.,4 figs.</TEXT></DOC>

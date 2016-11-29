@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-77-0257 </DOCNO><TEXT>The Turbine Engine Expert Maintenance Advisor System, TEXMAS, is beingimplemented on the T53 in order to effect both engine condition monitoringand diagnosis. The monitoring of trends in measured parameters leadsto prediction of component failures; diagnosis, or fault-isolation, deducesthe defective component or system on the basis of monitoring data. TEXMASuses the DIGR diagnostic reasoner expert system as the basis of its enginemonitoring and diagnosis operations.</TEXT></DOC>

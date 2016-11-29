@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-82-0092 </DOCNO><TEXT>The calculations leading to the fatigue assessment of a component operatingin the creep regime are computerised in the form of a program ASMEN47.The structure of the program is of a modular form using separate subroutinesfor stress relaxation, modified Poisson's ratio, Neubers correlationwith the options of using time hardening or strain hardening theoriesof a structure analysed at various time points (load cases) for a givenload history is used as input data to this program.</TEXT></DOC>

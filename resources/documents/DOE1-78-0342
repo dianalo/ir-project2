@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-78-0342 </DOCNO><TEXT>Arguments are presented to the effect that the optimal annealing schedulefor simulated annealing proceeds with constant thermodynamic speed, i.e.,with dT/dt = -(v T)/({epsilon}-{radical}C), where T is the temperature,{epsilon}- is the relaxation time, C ist the heat capacity, t is thetime, and v is the thermodynamic speed. Experimental results consistentwith this conjecture are presented from simulated annealing on graphpartitioning problems.</TEXT></DOC>

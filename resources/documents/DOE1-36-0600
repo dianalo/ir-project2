@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-36-0600 </DOCNO><TEXT>Monte Carlo techniques are used to generate extensive air shower data.Two methods of determining the core location of the shower have beeninvestigated: the method of least squares and the method of maximizingthe likelihood function. The likelihood function method gives a precisionof shower center location two times better than the chi/sup 2/ methodfor small numbers of detected particles.</TEXT></DOC>

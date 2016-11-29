@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE2-81-0620 </DOCNO><TEXT>The authors present a unified concurrency control algorithm for distributeddatabase systems in which each transaction may choose its own concurrencycontrol protocol. Specifically, they integrate Two-Phase Locking, TimestampOrdering, and Precedence Agreement into one unified concurrency controlscheme. They show the correctness of the new scheme and study the problemof selecting the best protocol for each transaction in order to optimizesystem performance.</TEXT></DOC>

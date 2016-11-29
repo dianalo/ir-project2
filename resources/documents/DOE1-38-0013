@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-38-0013 </DOCNO><TEXT>Conditional logistic regression analysis of a matched case-control studyinvestigating the relation between apolipoprotein A-1 and coronary death,adjusting for known risk factors, identified collinearity among the variables.Application of the Belsley, Kuh and Welsch diagnostic method to the Xmatrix, the pooled covariance matrix and the information matrix at thesolution, indicates that the dependency would have been detected onlyby considering the information matrix at the solution.</TEXT></DOC>

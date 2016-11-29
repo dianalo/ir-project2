@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-51-0859 </DOCNO><TEXT>REMIT - Relational Model Interpreter and Translator - is a formal querylanguage to natural language interpreter designed to aid query verificationin relational database environment. The system has been developed towork in conjunction with the ICL natural language query interface, NEL,which translates English query expressions into the formal query languageQUERYMASTER.</TEXT></DOC>

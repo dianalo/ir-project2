@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE2-64-0474 </DOCNO><TEXT>A circuit is presented which uses FADCs for instantaneous time digitizationat regular clock intervals. It allows the construction of pipeline TDCswith a resolution of a small fraction of the clock time. In measurementswith a 100 MHz, 8-bit FADC a resolution of {approx_equal} 30 ps has beenobtained.</TEXT></DOC>
