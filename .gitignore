@@ -16,6 +16,9 @@ project/plugins/project/
 .scala_dependencies
 .worksheet
 
+# IR-Project specific
+resources/
+
 # other
 *.DS_Store
 .classpath
