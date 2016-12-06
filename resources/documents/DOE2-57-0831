@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE2-57-0831 </DOCNO><TEXT>A multigroup neutron data collection (2993 groups) which can be used incalculations of various nuclear physical devices by the Monte Carlo method,is described. Neutron group constants are prepared from the ENDL, ENDF/Bevaluated data files. The library system maintenance comprises programsof data printing display scanning, output to the plotter and subprogramsfor direct data use in calculations.</TEXT></DOC>

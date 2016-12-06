@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-09-0889 </DOCNO><TEXT>The authors propose a new routing strategy for the KYKLOS II multiprocessorinterconnection network which achieves minimum distance for the pathbetween any two processors. For KYKLOS II with 2/sup n/ processors, theaverage distance is shorter than those of previous routing strategiesby approximately 21og/sub 2/n. The traffic density, a measure of trafficconcentration, is better than previous strategies for up to two thousandprocessors.</TEXT></DOC>

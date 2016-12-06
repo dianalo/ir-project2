@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE2-09-0580 </DOCNO><TEXT>This paper presents a multi-microprocessor implemented parallel-data drivenLISP system, which can be used for expert systems, natural language machinetranslation and diagnostic systems. A prototype system with four LISPprocessors has run in HIT. A more feasible and powerful system used forRussian-Chinese machine translation is being designed and built.</TEXT></DOC>

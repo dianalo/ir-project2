@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-71-1224 </DOCNO><TEXT>An automatic generation control system is described that uses an adaptiveoptimal control approach for designing a controller for small and largedisturbances to avoid poor damping of transients after large disturbancesand unnecessary chasing of small disturbances. Feedback gains automaticallyadapt to the state of the system to provide improved dynamic performanceof interconnected thermal and hydro energy systems.</TEXT></DOC>

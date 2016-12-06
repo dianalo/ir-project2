@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-79-0142 </DOCNO><TEXT>This dissertation deals mainly with the diagnosis aspects of fault-tolerantcomputing. A number of system models are studied, and their diagnosabilityconditions established. Fault-diagnosis algorithms for some models areproposed and complexity of diagnosis problem analyzed for some othermodels. Finally, some fault-tolerant computer networks are studied, andefficient routing algorithms are proposed for these networks.</TEXT></DOC>

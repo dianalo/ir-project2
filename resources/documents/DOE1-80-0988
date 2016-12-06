@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-80-0988 </DOCNO><TEXT>This paper presents a general and efficient method for transient simulationof HVDC converters. The proposed method utilizes a new algorithm, basedon network topological concepts, which provides an efficient solutionto the problem of modeling the inherently nonlinear characteristics andtime varying topology of static power converters caused by the switchingaction of the thyristor valves.</TEXT></DOC>

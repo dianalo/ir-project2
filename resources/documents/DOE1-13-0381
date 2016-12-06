@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-13-0381 </DOCNO><TEXT>The authors show how dictionary operations can be implemented, in a simpleyet efficient fashion, on hypercube machines. The fundamental mechanismis the embedding of a sorted chain structure in the hypercube and theapplication of the binary-search paradigm to this embedding.</TEXT></DOC>

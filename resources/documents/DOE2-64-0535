@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE2-64-0535 </DOCNO><TEXT>A simple, multi-user, Macintosh based DAQ system is described. It is amodular system where the work can be subdivided between different CPUsworking independently at the same time. The different tasks are assignedto different single-user workstations connected by a network.</TEXT></DOC>

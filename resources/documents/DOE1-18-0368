@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DOC><DOCNO> DOE1-18-0368 </DOCNO><TEXT>The major difficulty in applying Ada Design Languages (ADLs) within thecontext of DOD-STD-2167 is reconciling the difference between the DOD-STD-2167static structure and the Ada program structure. This paper seeks to clarifythis issue and recommend future changes to both ADLs and DOD-STD-2167to increase their compatibility. 14 references.</TEXT></DOC>
