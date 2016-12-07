@@ -17,7 +17,7 @@ project/plugins/project/
 .worksheet
 
 # IR-Project specific
-resources/
+resources/**
 
 # other
 *.DS_Store

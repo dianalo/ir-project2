@@ -45,6 +45,12 @@
   		<artifactId>breeze_2.10</artifactId> <!-- or 2.11 -->
   		<version>0.12</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.iq80.leveldb/leveldb -->
+<dependency>
+    <groupId>org.iq80.leveldb</groupId>
+    <artifactId>leveldb</artifactId>
+    <version>0.9</version>
+</dependency>
   </dependencies>
   
 
