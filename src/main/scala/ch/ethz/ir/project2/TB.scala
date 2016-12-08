@@ -8,6 +8,8 @@ class TB {
   println("Running Term Based")
   
   val path="~/Document/documents_small/"
+  val query="Cruelty to Animals Prevention Legislation Passed"
+  
   val streamSize=1000  
     
   def termScore(path:String, query:String): Map[String,Double]={
