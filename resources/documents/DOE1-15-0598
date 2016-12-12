@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE1-15-0598 </DOCNO><TEXT>We define the constrained matching problem as follows: Given a graph,we identify subsets of the edges and require that each set is entirelycontained in the matching or is disjoint from the matching. We show thatthe constrained matching is NP-complete. 1 ref., 2 figs.</TEXT></DOC>

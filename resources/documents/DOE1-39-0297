@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE1-39-0297 </DOCNO><TEXT>A data-acquisition approach with fast digitizers at the earliest possiblestage is discussed. Event selection is achieved digitally in an asynchronous,distributed way using modular system components. Experiment tuneup downto the very first level is under full computer control. One of the alreadyrealized system components, a fast time digitizer (with 650 ps resolution,8 channels, 32 bits) is briefly described.</TEXT></DOC>

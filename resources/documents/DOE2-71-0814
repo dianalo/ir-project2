@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-71-0814 </DOCNO><TEXT>Translation-, rotation-, and scale-invariant recognition of multiple,superimposed, partially specified or occluded objects can be accomplishedin a fast, simple, distributed and parallel fashion using localizablefeatures with intrinsic orientation. All known objects are recognized,localized, and segmented simultaneously. The method is robust and efficient.</TEXT></DOC>

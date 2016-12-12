@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-71-0820 </DOCNO><TEXT>A new proposal for communication and synchronization based on shared variablesis presented. The background and essential concepts of the proposal arediscussed. The language notation supporting it is introduced, and severalsolutions of a variety of concurrent programming problems can also befound in this paper.</TEXT></DOC>

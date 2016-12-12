@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE1-18-0369 </DOCNO><TEXT>Reduced Instruction Set Computers (RISC) Microprocessors provide highspeed execution of simple instructions. Where even RISC execution isnot fast enough, Unisys-defined Memory Management Unit (MMU) and interconnectnetwork devices allow two to 4096 RISC microprocessors to combine intoan effective multiprocessor system for defense communications processing.</TEXT></DOC>

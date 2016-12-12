@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-05-0665 </DOCNO><TEXT>The authors have developed a large format digital scanner for severalapplications in nucleic acid analysis. Here they describe the scanningof autoradiographs of DNA sequencing gels and a set of programs for readingthe base sequence. The programs correct distortions in the gel, recognizebands by their characteristic shape and assign bases to bands by weightingband position and intensity. The sequence read in this way is as accurateas that read by an expert.</TEXT></DOC>

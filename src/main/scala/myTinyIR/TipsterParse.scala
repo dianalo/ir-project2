@@ -9,5 +9,6 @@ import java.io.InputStream
 class TipsterParse(is: InputStream) extends XMLDocument(is) {  
   override def body   : String = read(doc.getElementsByTagName("TEXT"))
   override def ID     : String = read(doc.getElementsByTagName("DOCNO")).filterNot(_.isSpaceChar)
-  def dateLine        : String = read(doc.getElementsByTagName("DATELINE"))
+  //def dateLine        : String = read(doc.getElementsByTagName("DATELINE"))
+  override def title  : String = read(doc.getElementsByTagName("HEAD")) 
 }

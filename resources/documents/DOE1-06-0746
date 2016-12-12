@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE1-06-0746 </DOCNO><TEXT>This paper presents a query processing model MQPM of database machinesystems, which is used to solve the dependence problems among multi-querytasks. Based on the MQPM, a unifying algorithm of multi-processor allocationssuitable to database machine circumstances is given.</TEXT></DOC>

@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-81-0018 </DOCNO><TEXT>A new 3-D treatment planning system implemented on a VAX-11/780 is described.A study may consist of up to 100 512x512 images. Each slice may have50 structures, each containing 250 points. Doses are calculated at upto 600,000 points. Dose may be displayed superimposed on the CT imagein any arbitrary plane or on a shaded 3-D view. Moderate size data setscan be manipulated in real time. Large data sets take several seconds.10 refs.; 1 figure; 1 table. refs.</TEXT></DOC>

@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-64-0700 </DOCNO><TEXT>I report a simple technique for conditioning conjugate gradient or conjugateresidue matrix inversion as applied to the lattice gauge theory problemof computing the propagator of Wilson fermions. One form of the techniqueprovides about a factor of three speedup over an unconditioned algorithmwhile running at the same speed as an unconditioned algorithm. I illustratethe method as it is applied to a conjugate residue algorithm.</TEXT></DOC>

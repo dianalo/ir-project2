@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-26-0298 </DOCNO><TEXT>We integrate Voice Command interfaces into the existing architecturesof Editor tools developed to specify the configuration of a Site IndependentConfigurable Alarm Display System (SICADS). The complete SICADS softwarepackage consists of the editor tools to specify a new alarm display system,and the system generator to build the specified system, using the newspecification entered through the editors and a library of reusable softwaremodules designed to be data-driven.</TEXT></DOC>

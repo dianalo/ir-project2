@@ -2,8 +2,10 @@ package ch.ethz.ir.project2
 
 import ch.ethz.dal.tinyir.processing._
 
+//count = frequency
 case class tfTuple (term: String, doc: String, count: Int)
 
+//
 object useTFTuple{
   def tfTuples (iter: TipsterCorpusIterator) : (Stream[tfTuple], Long) = {
     var tfList = Stream[tfTuple]()

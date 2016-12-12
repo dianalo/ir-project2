@@ -3,54 +3,51 @@ package ch.ethz.ir.project2
 import ch.ethz.dal.tinyir.io._
 import ch.ethz.dal.tinyir.lectures._
 import ch.ethz.dal.tinyir.processing._
+import com.github.aztek.porterstemmer.PorterStemmer
 
-class TB (trainingDataFolder: String){
-  println("Running Term Based")
-  
-  val streamSize=1000  
+//compute tf-idf weigths for documents
+class TB (index: Index){  
+  val docNo = 100000 
     
-  def termScore(query:String): Map[String,Double]={
-    //input: doc stream
-    //output: <doc, query-match-score>
-        
-    val stream = new TipsterStream (trainingDataFolder)  
-    val docNo=stream.length
-    println("Total document number: " +docNo )
+  //input: query
+  //output: <doc, query-match-score>, sorted by score
+  def termScore(query:String): List[(String,Double)]={
+    
     var doc_tfidf = collection.Map[String,Int]()
     
-    val queryShingled=Tokenizer.tokenize(query)
-    println("Query: "+ queryShingled)
+    //preprocessing
+    val queryPreProc = Preprocessing.preprocessQuery(Tokenizer.tokenize(query))
+   
+//  println("Query: "+ queryPreProc)
     var doc_queryScore=collection.immutable.Map[String,Double]()
     
-    for (doc <- stream.stream.take(streamSize)) { 
-      
-      val docID=doc.ID
-      println("Current Doc id: "+docID)
-      var localQScore=0.0;
-      
-      val LTF:Map[String,Double]=TermFrequencies.logtf(Tokenizer.tokenize(doc.body))
-     
-      var df = collection.immutable.Map[String,Int]()
-      for (doc <- stream.stream){
-        df ++= doc.tokens.distinct.map(t => t.toLowerCase() -> (1+df.getOrElse(t,0)))
+    var scores = Map[String, Double]()
+    
+    for(q <- queryPreProc){
+      //fetch posting list
+      val qDocs = index.get(q)
+      //add documents to overall score map, take care not to add duplicates
+      val docScoreMap = qDocs.map(d => (d.id, 0.0)).toMap
+      val temp = scores.toSeq ++ docScoreMap.toSeq
+      scores = temp.groupBy(_._1).mapValues(_.map(_._2).toList.sum)
+      //compute values needed for scoring
+      val df = qDocs.length
+      val idf = Math.log(docNo / (df+1))
+      //some values are doc specific (local TF)
+      for(qDoc <- qDocs){
+        val ltf = Math.log(qDoc.tfInDoc+1)
+        
+        val tfidf = ltf*idf
+        
+        //update score for this doc
+        val oldV = scores.getOrElse(qDoc.id, 0.0) //each doc should be in map     
+        scores = scores.updated(qDoc.id, oldV + tfidf)
       }
-            
-      val IDF:Map[String,Double]=TermFrequencies.idf(df,docNo)
-      val TFIDF=LTF++IDF.map{case(k,v)=>k->(v*LTF.getOrElse(k,1.0))}
       
-      for(q <- queryShingled){
-        localQScore+=TFIDF(q)
-      }
-      
-      println(docID+"'s query score: "+localQScore)
-      doc_queryScore+=(docID.toString()->localQScore)
     }
-    
-    
-    val qScoreSorted=doc_queryScore.toSeq.sortWith(_._2 > _._2).take(100).toMap
-    for ((k,v) <- qScoreSorted) println("key: %s, value: %s\n", k, v)
-    
-    return qScoreSorted
+      //output top 100 sorted scores
+      val scoresL = scores.toList.sorted
+      scoresL.take(100)
 }
  
  

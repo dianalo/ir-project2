@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-21-0527 </DOCNO><TEXT>Software has been developed to assist RNA fingerprinting analysis. Oneprogram generates, from a DNA sequence data file, the oligonucleotidesresulting from digestion of an RNA transcript labeled with any specifiednucleotide(s). Oligonucleotides are sorted according to their positionon the fingerprint. Expected molar yields and products of secondary redigestionare also indicated. A second program facilitates calculation of experimentalmolar yields of oligonucleotides.</TEXT></DOC>

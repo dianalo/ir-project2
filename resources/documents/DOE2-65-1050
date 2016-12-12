@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-65-1050 </DOCNO><TEXT>Control-driven arrays like systolic arrays provide high levels of parallelismand pipelining for inherently regular computations. Data-driven arrayscan provide the same for algorithms with no internal regularity.</TEXT></DOC>

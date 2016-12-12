@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-14-0517 </DOCNO><TEXT>Stratified sampling is a method used in Monte Carlo calculations to takeadvantage of certain known aspects of probability distributions. Thesampling region is subdivided into discrete subregions, and each of theseis sampled a preassigned number of times. A form of stratified samplinghas been implemented into a major Monte Carlo particle transport computercode with very encouraging results.</TEXT></DOC>

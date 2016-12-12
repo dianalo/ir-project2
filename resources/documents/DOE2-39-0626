@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-39-0626 </DOCNO><TEXT>For a mean field ferromagnet, we calculate as a function of temperaturethe probability that two configurations submitted to the same thermalnoise fall into opposite valleys. For a system of N spins, we show thatthe time for two configurations to meet increases like log N when thetwo configurations belong to the same valley and exponentially with Nwhen the two configurations belong to different valleys. The slope ofthis exponential growth gives a measure of the barrier height.</TEXT></DOC>

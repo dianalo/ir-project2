@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-32-1175 </DOCNO><TEXT>This paper presents an original method for digital signal processing basedon variable frequency sampling techniques. The proposed method is studiedfrom a theoretical point of view and a criterion is defined to allowcorrect settling of sampling parmeters, as the sampling theorem does,in constant frequency sampling. Finally, this method is applied to electricalpower measurement and to spectral analysis. The results of tests (includingerror assessment) on a lab prototype are reported.</TEXT></DOC>

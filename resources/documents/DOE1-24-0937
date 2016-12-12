@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE1-24-0937 </DOCNO><TEXT>The knowledge retrieval system reported here consists of two elements:a utility program and a data set containing the knowledge base. The utilityprogram provides the capability of retrieving and displaying informationusing layered menus. The layered menu system is similar to a logicaltree structure, with each menu being a major node of the tree. The systemis designed to be data driven, which allows it to be maintained, refined,and expanded by modifying the data set.</TEXT></DOC>

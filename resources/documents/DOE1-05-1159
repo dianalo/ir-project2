@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE1-05-1159 </DOCNO><TEXT>Restoration of noisy images through the use of a Gibbs field model forthe image and a Gaussian random field characterization of the corruptingnoise is discussed in this paper. Two new algorithms capable of parallelimplementation are presented and shown to yield satisfactory restorationof images corrupted by high levels of noise.</TEXT></DOC>

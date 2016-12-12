@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<DOC><DOCNO> DOE2-62-1040 </DOCNO><TEXT>The Structural Operational Semantics (SOS) is one of the good methodsdeveloped recently for specifying the semantics of programming languages.In this paper, the authors use this technique to describe the formalsemantics of an Ada-based language. The authors' discussion is on thefollowing topics: (1) The static semantics of the language; (2) The executionof sequential/parallel components; (3) The &quot;hand-shaking&quot; communications;(4) The access control to the shared variables.</TEXT></DOC>

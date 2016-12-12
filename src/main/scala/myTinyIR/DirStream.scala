@@ -16,11 +16,11 @@ import java.io.File
 class DirStream (dirpath: String, extension: String = "") 
 extends DocStream {
 
-  def stream: Stream[InputStream] = validNames.map(fn => DocStream.getStream(fn)).toStream 
-  def length = fileNames.length
+  def stream: Stream[InputStream] = sortedNames.map(fn => DocStream.getStream(fn)).toStream 
+  def length = validNames.length    
 
-  private def fileNames = new File(dirpath).listFiles.map(path(_))
-  private def validNames = fileNames.filter(valid(_))
+  private def sortedNames = validNames.sorted(DirStream.FileOrder.orderingByLex) 
+  private def validNames = new File(dirpath).listFiles.map(path(_)).filter(valid(_))
   private def valid(fn: String): Boolean = fn.endsWith(extension)
   private def path (f: File): String = Try(f.getAbsolutePath).getOrElse("")  
 }
