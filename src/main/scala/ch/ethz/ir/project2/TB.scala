@@ -6,24 +6,21 @@ import ch.ethz.dal.tinyir.processing._
 import com.github.aztek.porterstemmer.PorterStemmer
 
 //compute tf-idf weigths for documents
-class TB (index: Index){  
-  val docNo = 100000 
+class TB (index: Index, var scores: Map[String, Double]){  
+  val docNo = 100001
+  val wTitle = 100
     
   //input: query
-  //output: <doc, query-match-score>, sorted by score
+  //output: <doc, query-match-score>, 100 documents with best scores, sorted by score
   def termScore(query:String): List[(String,Double)]={
     
-    var doc_tfidf = collection.Map[String,Int]()
-    
+    //reset map
+    scores = Map[String, Double]()
+        
     //preprocessing
     val queryPreProc = Preprocessing.preprocessQuery(Tokenizer.tokenize(query))
-   
-//  println("Query: "+ queryPreProc)
-    var doc_queryScore=collection.immutable.Map[String,Double]()
-    
-    var scores = Map[String, Double]()
-    
-    for(q <- queryPreProc){
+               
+     for(q<-queryPreProc){
       //fetch posting list
       val qDocs = index.get(q)
       //add documents to overall score map, take care not to add duplicates
@@ -37,7 +34,14 @@ class TB (index: Index){
       for(qDoc <- qDocs){
         val ltf = Math.log(qDoc.tfInDoc+1)
         
-        val tfidf = ltf*idf
+        //look at title of interesting doc, no log, as only few appearances
+        val title = index.getTitle(qDoc.id)
+        val tfTitle = Preprocessing.preprocessQuery(title).groupBy(identity).mapValues(_.length).getOrElse(q, 0)
+        
+        //reward term frequency in title
+        val tfidf = (ltf+wTitle*tfTitle)*idf
+        //without title rewarding
+        //val tfidf = ltf*idf
         
         //update score for this doc
         val oldV = scores.getOrElse(qDoc.id, 0.0) //each doc should be in map     
@@ -46,15 +50,7 @@ class TB (index: Index){
       
     }
       //output top 100 sorted scores
-      val scoresL = scores.toList.sorted
-      scoresL.take(100)
+      scores.toList.sortWith{case((a1, b1), (a2, b2)) => b1 > b2}.take(100)
 }
- 
- 
-  /*
-  def evaluate(query:String):Double={
-    // P, R , F1, AP, AMP
-  }
-  */
     
 }

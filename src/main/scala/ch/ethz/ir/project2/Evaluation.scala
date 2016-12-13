@@ -15,8 +15,8 @@ object Evaluation{
     new FullEvaluationResult(resTerm, resLang)
   }
   
-  
-  def evaluateSingleModel(queries: List[(String, Int)], docRelevance: Map[(String,Int), Boolean], model: Object, modelType: String) : SingleEvaluationResult = {
+  //allow to pass both models via casting
+  private def evaluateSingleModel(queries: List[(String, Int)], docRelevance: Map[(String,Int), Boolean], model: Object, modelType: String) : SingleEvaluationResult = {
                  
       //evaluation measures for term based model: P, R, F1
       var relDocs = 0
@@ -26,32 +26,31 @@ object Evaluation{
       var R_map = Map[Int, Double]()
       var F1_map = Map[Int, Double]()
      
-     
-      //needed for AP
       var AP = Map[Int, Double]()
-      var P_rels = new Array[Double](100)
-      var n_rels = 0.0
        
        for(q <- queries){
          println("scoring query " + q._2)
-         //termbased model
+         
+          
+         var P_rels = new Array[Double](100)
+         var n_rels = 0.0
+         
+         //cast to used model
          var topDocs = List[(String, Double)]()
          if(modelType == "term"){
            topDocs = model.asInstanceOf[TB].termScore(q._1)
          }
          else if(modelType == "lang"){
-           topDocs = model.asInstanceOf[LanguageModel].computeProbabilities(q._1, 0.2)
+           topDocs = model.asInstanceOf[LanguageModel].computeProbabilities(q._1)
          }
-         //println("termdocs : " + topDocsTerm.length)        
 
-         
          var i = 1
          var iter = topDocs.iterator
          while(iter.hasNext){
            val d = iter.next
            
            //relevant docs for this query according to qrel
-           relDocs = docRelevance.toList.filter{case ((d_id, qNum), r) => qNum==q._1 && r}.length
+           relDocs = docRelevance.toList.filter{case ((d_id, qNum), r) => qNum==q._2 && r}.length
            
            //combine key for relevance map
            val relev = docRelevance.getOrElse((d._1, q._2), false)

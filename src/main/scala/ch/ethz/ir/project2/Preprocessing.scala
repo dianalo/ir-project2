@@ -10,20 +10,23 @@ object Preprocessing {
     
     //short words
     val len = noSw.filter(_.length > 4).toList
-    val lowercased = len.map(w => w.toLowerCase).map(_.filter{_.isLetterOrDigit})
+    val letterOrDigit = len.map(_.filter{_.isLetterOrDigit})
     //stemming
-    //val stem = noSw.map(w => PorterStemmer.stem(w)).toList
+    //val stem = len.map(w => PorterStemmer.stem(w)).toList
     //only take words appearing more than once
-    lowercased.diff(lowercased.groupBy(identity).mapValues(_.length).filter(_._2 == 1).toList.map(_._1))
+    letterOrDigit.diff(letterOrDigit.groupBy(identity).mapValues(_.length).filter(_._2 <= 1).toList.map(_._1))
   }
   
   def preprocessQuery(tokens: List[String]) : List[String] = {
     //Stop words (no duplicate filtering!! otherwise termfrequency useless...)
     val noSw = StopWords.filterOutSW(tokens).toList
     
+    //stemming
+    //val stem = noSw.map(w => PorterStemmer.stem(w)).toList
+    
     //short words
     val len = noSw.filter(_.length > 4).toList
-    val lowercased = len.map(w => w.toLowerCase).map(_.filter{_.isLetterOrDigit})
-    lowercased
+    val letterOrDigit = len.map(_.filter{_.isLetterOrDigit})
+    letterOrDigit
   }
 }

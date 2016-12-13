@@ -4,19 +4,18 @@ import myTinyIR._
 import ch.ethz.dal.tinyir.processing.StopWords
 import com.github.aztek.porterstemmer.PorterStemmer
 
-//totalTerms + sizeIndex needed for languagemodel
-class Index(path: String, maxDocs: Int, var titleIndex: Map[String, List[String]], var sizeIndex: Map[String, Int], var totalTerms: Long){
-  
-//  case class IndexTuple(id: String, tfInDoc: Int, title: String, docFreq: Int) extends Ordered[IndexTuple]{
-//    def compare(that: IndexTuple) : Int = (this.id, this.tfInDoc) compare (that.id, that.tfInDoc)
-//  }
-  
-  case class DocPreProcessedTokens(id: String, tokens: List[String])
-  case class IndexTuple(id: String, tfInDoc: Int)
-  
+case class DocPreProcessedTokens(id: String, tokens: List[String])
+case class IndexTuple(id: String, tfInDoc: Int)
+
+class Index(path: String, var maxDocs: Int, var titleIndex: Map[String, List[String]], var sizeIndex: Map[String, Int], var totalTerms: Long){
+     
   //term index
   val index : Map[String,List[IndexTuple]] = {
     var iter = new TipsterCorpusIterator(path)
+    
+    if(maxDocs == 0){
+      maxDocs = 100001
+    }
     
     var indexMap = Map[String, List[IndexTuple]]()
     var i=0.0
@@ -42,19 +41,20 @@ class Index(path: String, maxDocs: Int, var titleIndex: Map[String, List[String]
       val docWithTF = preproc.tokens.groupBy(identity).mapValues(_.length).toList
                       .map{case (t, l) => (t, new TermDocTuple(t, l, preproc.id))}.toMap
       
-      //println(docWithTF.toList.filter{_._2.tf > 1})
       //make IndexTuples
       val tuples = docWithTF.mapValues(p => new IndexTuple(p.id, p.tf))
-      //add them to indexMap, take care not to overwrite anything      
-      val temp = indexMap.toSeq ++ tuples.mapValues(v => List(v)).toSeq
-      indexMap = temp.groupBy(_._1).mapValues(_.flatMap(_._2).toList)
+
+      for(k <- tuples.keys){
+        val oldVal = indexMap.getOrElse(k, List())
+        val newVal = (tuples.getOrElse(k, new IndexTuple("",0))::oldVal).reverse
+        indexMap = indexMap.updated(k, newVal)
+      }
       
       i = i+1
       println(i/maxDocs * 100 + "% done.")
     }
     
-    //filter out postings with term only appearing once
-    indexMap.mapValues(l => l.filter(_.tfInDoc > 1))
+    indexMap
   }
   
   
@@ -76,7 +76,6 @@ class Index(path: String, maxDocs: Int, var titleIndex: Map[String, List[String]
 
 object Index {
   def main(args: Array[String]){
-    //val ts = new TipsterStream("resources/documentsSmall").stream
     
     println("creating index")
     var idx = new Index("resources/documents", 100, Map[String, List[String]](), Map[String, Int](), 0)
